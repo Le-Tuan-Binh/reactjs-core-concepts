@@ -1,15 +1,17 @@
 import "./App.css";
-import { Banner, Contact, Profile } from "./components";
+import { Avatar } from "./components/Avatar";
 
 function App() {
+	const name = "tbin";
+	const handleGetFullYear = () => {
+		return new Date().getFullYear();
+	};
 	return (
 		<>
 			<div className="content">
-				<h1>Vite with React</h1>
-				<p>Start building amazing thing with React </p>
-				<Profile />
-				<Banner />
-				<Contact />
+				<Avatar />
+				<p>My name is {name}</p>
+				<p>This year is {handleGetFullYear()}</p>
 			</div>
 		</>
 	);
